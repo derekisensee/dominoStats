@@ -31,6 +31,7 @@
             echo "<br>";
         }  
         ?>
+        <a href="playerCreation/playerMake.php"><button class="btn btn-link">Click here to create a player.</button></a>
     
         <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
