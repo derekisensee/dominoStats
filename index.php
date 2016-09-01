@@ -8,47 +8,32 @@
         <link rel="stylesheet" href="css/index.css">
         
         <meta charset="utf-8">
-    <div id="dominoStatsHead" class="container">
+        <div id="dominoStatsHead" class="container">
             <h1>Super Duper Domino Stats</h1>
-</div>
+        </div>
     </head>
     
     <body>
-        <p>Welcome to the place where the best domino players are on display</p>
-        <p>Enter a name to find the player of your interest.</p>
-        <form action="processData.php" method="post">
-            firstName: <input type="text" name="firstName">
-            lastName: <input type="text" name="lastName">
-            win: <input type="number" name="win">
-            lost: <input type="number" name="lost">
-            <input type="submit">
-        </form>
-    <p> Or click here to make a new player</p>
-        
-    <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "domino";
-    $con = mysqli_connect($servername, $username, $password, $dbname);
-    $result = mysqli_query($con, "SELECT * FROM player");
-        
-    while ($row = mysqli_fetch_assoc($result)) 
-    {
-        echo "<strong>firstName: </strong>" . $row['firstName'];
-		echo " <strong>lastName: </strong>" . $row['lastName'];
-        echo " <strong>win: </strong>" . $row['win'];
-        echo " <strong>lost: </strong>" . $row['lost'];
-        echo "<br>";
-    }
+        <?php
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "domino";
+        $con = mysqli_connect($servername, $username, $password, $dbname);
+        $result = mysqli_query($con, "SELECT * FROM player");
 
+        while ($row = mysqli_fetch_assoc($result)) 
+        {
+            echo "<strong>firstName: </strong>" . $row['firstName'];
+            echo " <strong>lastName: </strong>" . $row['lastName'];
+            echo " <strong>win: </strong>" . $row['win'];
+            echo " <strong>lost: </strong>" . $row['lost'];
+            echo "<br>";
+        }  
+        ?>
     
-    ?>
-
-  
-    
-    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
-    <script src='js/index.js'></script>
+        <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
+        <script src='js/index.js'></script>
     </body>
 </html>
