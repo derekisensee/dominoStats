@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Domino Tracker</title>
         <!--Links for font awesome, jquery UI, and bootstrap. also calls the index.css file in the css folder-->
         <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
         <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>

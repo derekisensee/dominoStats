@@ -9,7 +9,7 @@
     $con = mysqli_connect($servername, $username, $password, $dbname);
     
     //searches through database to confirm no other id of $id exists
-    mysqli_query($con, "SELECT id FROM player");
+    $result = mysqli_query($con, "SELECT id FROM player");
     while ($row = mysqli_fetch_assoc($result)) {
         if($row['id'] === $id)
             $id = Rand(0, 4000);
