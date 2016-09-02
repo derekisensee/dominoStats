@@ -22,7 +22,7 @@
 	$lScore = $_POST['lScore'];
 	
     $con = mysqli_connect($servername, $username, $password, $dbname);
-    mysqli_query($con, "INSERT INTO game (id, wFirst, wLast, lFirst, lLast, date, fDownLastName, wDrawTimes, wBones, wScore, lDrawTimes, lBones, lScore, lDrawTimes, lBones, lScore) VALUES ('$id', '$wFirst', '$wLast', '$lFirst', '$lLast', '$date', '$fDownLastName', '$wDrawTimes', '$wBones', '$wScore', '$lDrawTimes', '$lBones', '$lScore', '$lDrawTimes', '$lBones', 'lScore')");
+    mysqli_query($con, "INSERT INTO game (id, wFirst, wLast, lFirst, lLast, date, fDownLastName, wDrawTimes, wBones, wScore, lDrawTimes, lBones, lScore) VALUES ('$id', '$wFirst', '$wLast', '$lFirst', '$lLast', '$date', '$fDownLastName', '$wDrawTimes', '$wBones', '$wScore', '$lDrawTimes', '$lBones', '$lScore')");
 
     //$con = mysqli_connect($servername, $username, $password, $dbname);
     //mysqli_query($con, "INSERT INTO player (id, firstName, lastName, win, lost) VALUES ('$id', '$firstName','$lastName', '$win', '$lost')");
