@@ -21,7 +21,7 @@
             winnerLastName: <input type="text" name="wLast">
             loserFirstName: <input type="text" name="lFirst">
             loserLastName: <input type="text" name="lLast">
-            date: <input type="date" name= "date">
+            date: <input type="text" name= "date" placeholder="yyyy-mm-dd">
             firstDownLastName: <input type="text" name="fDownLastName">
             winnerDrawTimes: <input type="Number" name="wDrawTimes">
             winnerBones: <input type="number" name="wBones">
