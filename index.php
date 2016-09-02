@@ -23,6 +23,21 @@
             lost: <input type="number" name="lost">
             <input type="submit">
         </form>
+         <form action="processData.php" method="post">
+            WinnerfirstName: <input type="text" name="wFirst">
+            lastName: <input type="text" name="wLast">
+            LoserfirstName: <input type="text" name="lFirst">
+            lastNamel: <input type="text" name="Last">
+            FirstDownLastName: <input type="text" name="fDownLastName">
+            winnerDrawTimes: <input type="Number" name="wDrawTimes">
+            winnerBones: <input type="number" name="wBones">
+            winnerScore: <input type="number" name="wScore">
+            loserDrawTimes: <input type="Number" name="lDrawTimes">
+            loserBones: <input type="number" name="lBones">
+            loserScore: <input type="number" name="lScore">
+            
+            <input type="submit">
+        </form>
     <p> Or click here to make a new player</p>
         
     <?php
