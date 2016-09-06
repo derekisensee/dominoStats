@@ -32,43 +32,7 @@
             
             <input type="submit">
         </form>
-    <p> Or click here to make a new player</p>
-        
-    <?php
-    /*$servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "domino";
-    $con = mysqli_connect($servername, $username, $password, $dbname);
-    $result = mysqli_query($con, "SELECT * FROM player");
-        
-    while ($row = mysqli_fetch_assoc($result)) 
-    {
-        echo "<strong>firstName: </strong>" . $row['firstName'];
-		echo " <strong>lastName: </strong>" . $row['lastName'];
-        echo " <strong>win: </strong>" . $row['win'];
-        echo " <strong>lost: </strong>" . $row['lost'];
-		
-		echo "<strong>winnerfirstName: </strong>" . $row['wFirst'];
-		echo "<strong>winnerLastName: </strong>" . $row['wLast'];
-		echo "<strong>loserFirstName: </strong>" . $row['lFirst'];
-		echo "<strong>loserLastName: </strong>" . $row['lLast'];
-		echo "<strong>date: </strong>" . $row['date'];
-		echo "<strong>firstDownLastName: </strong>" . $row['fDownLastName'];
-		echo "<strong>winnerDrawTimes: </strong>" . $row['wDrawTimes'];
-		echo "<strong>winnerBones: </strong>" . $row['wBones'];
-		echo "<strong>winnerScore: </strong>" . $row['wScore'];
-		echo "<strong>loserDrawTimes: </strong>" . $row['lDrawTimes'];
-		echo "<strong>loserBones: </strong>" . $row['lBones'];
-		echo "<strong>loserScore: </strong>" . $row['lScore'];
-	
-		echo "<br>";
-    }
-*/
-    
-    ?>
-
-  
+    <p> Or click here to make a new player</p>  
     
     <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
