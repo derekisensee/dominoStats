@@ -49,9 +49,9 @@
                 <br>
                 <br>
                 <h2>Loser Stats</h2>
-                <div class="form-group">
+                <div class="form-group col-xs-2">
                     <label for="lFirstName">First Name</label>
-                    <input type="text" id="lFirstName" name="lFirst">
+                    <input type="text" class="form-control input-sm" id="lFirstName" name="lFirst">
                 </div>
                 <div class="form-group col-xs-2">
                     <label for="lLastName">Last Name</label>
