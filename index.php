@@ -6,26 +6,32 @@
         <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
         <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css'>
         <link rel="stylesheet" href="css/index.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <!--^This makes the page mobile friendly. DIsables zooming with user-scalable=no-->
         
         <meta charset="utf-8">
-    <div id="dominoStatsHead" class="container">
-            <h1>Super Duper Domino Stats</h1>
-</div>
+        <div id="dominoStatsHead" class="container">
+            <h1>Super Duper Domino Stats - Game Entry</h1>
+        </div>
     </head>
     
     <body>
-        <p>Game Entry</p>
         <div class="container-fluid">
+            <h2>Date and First Down</h2>
             <form class=""action="processData.php" method="post">
                 <div class="form-group col-xs-2">
                     <label for="date">Date</label>
-                    <input type="text" class="form-control" name= "date" id="date" placeholder="yyyy-mm-dd">
+                    <input type="text" class="form-control input-sm" name= "date" id="date" placeholder="yyyy-mm-dd">
+                </div>
+                <div class="form-group col-xs-2"> <!--Might have to move this div-->
+                    <label for="fDownLastName">First Down Last Name</label>
+                    <input type="text" class="form-control input-sm" id="fDownLastName" name="fDownLastName">
                 </div>
                 <br>
                 <br>
                 <br>
                 <h2>Winner Stats</h2>
-                <div class="form-group col-xs-3">
+                <div class="form-group col-xs-2">
                     <label for="wFirstName">First Name</label>
                     <input type="text" class="form-control input-sm" id="wFirstName" name="wFirst">
                 </div>
@@ -69,15 +75,17 @@
                     <label for="lScore">Score</label>
                     <input type="number" class="form-control input-sm" id="lScore" name="lScore">
                 </div>
-                <div class="form-group col-xs-2"> <!--Might have to move this div-->
-                    <label for="fDownLastName">First Down Last Name</label>
-                    <input type="text" class="form-control input-sm" id="fDownLastName" name="fDownLastName">
-                </div>
+                <br>
+                <br>
+                <br>
+                <br>
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
         </div>
-        <p> Or click <a href="playerCreation/index.php">here</a> to make a new player</p>  
-    
+        <div style="text-align:center;">
+            <p> Or click <a href="playerCreation/index.php">here</a> to make a new player</p>  
+        </div>
+        
         <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
         <script src='js/index.js'></script>
