@@ -14,28 +14,72 @@
     </head>
     
     <body>
-        <p>Welcome to the place where the best domino players are on display</p>
-        <p>Enter a name to find the player of your interest.</p>
-         <form action="processData.php" method="post">
-            winnerfirstName: <input type="text" name="wFirst">
-            winnerLastName: <input type="text" name="wLast">
-            loserFirstName: <input type="text" name="lFirst">
-            loserLastName: <input type="text" name="lLast">
-            date: <input type="text" name= "date" placeholder="yyyy-mm-dd">
-            firstDownLastName: <input type="text" name="fDownLastName">
-            winnerDrawTimes: <input type="Number" name="wDrawTimes">
-            winnerBones: <input type="number" name="wBones">
-            winnerScore: <input type="number" name="wScore">
-            loserDrawTimes: <input type="Number" name="lDrawTimes">
-            loserBones: <input type="number" name="lBones">
-            loserScore: <input type="number" name="lScore">
-            
-            <input type="submit">
-        </form>
-    <p> Or click here to make a new player</p>  
+        <p>Game Entry</p>
+        <div class="container-fluid">
+            <form class=""action="processData.php" method="post">
+                <div class="form-group col-xs-2">
+                    <label for="date">Date</label>
+                    <input type="text" class="form-control" name= "date" id="date" placeholder="yyyy-mm-dd">
+                </div>
+                <br>
+                <br>
+                <br>
+                <h2>Winner Stats</h2>
+                <div class="form-group col-xs-3">
+                    <label for="wFirstName">First Name</label>
+                    <input type="text" class="form-control input-sm" id="wFirstName" name="wFirst">
+                </div>
+                <div class="form-group col-xs-2">
+                    <label for="wLast">Last Name</label>
+                    <input type="text" class="form-control input-sm" id="wLast" name="wLast">
+                </div>
+                <div class="form-group col-xs-2">
+                    <label for="wDrawTimes">Draw Times</label>
+                    <input type="Number" class="form-control input-sm" id="wDrawTimes" name="wDrawTimes">
+                </div>
+                <div class="form-group col-xs-2">
+                    <label for="wBones">Bones</label>
+                    <input type="number" class="form-control input-sm" id="wBones" name="wBones">
+                </div>
+                <div class="form-group col-xs-2">
+                    <label for="wScore">Score</label>
+                    <input type="number" class="form-control input-sm" id="wScore" name="wScore">
+                </div>
+                <br>
+                <br>
+                <br>
+                <h2>Loser Stats</h2>
+                <div class="form-group">
+                    <label for="lFirstName">First Name</label>
+                    <input type="text" id="lFirstName" name="lFirst">
+                </div>
+                <div class="form-group">
+                    <label for="lLastName">Last Name</label>
+                    <input type="text" id="lLastName" name="lLast">
+                </div>
+                <div class="form-group">
+                    <label for="lDrawTimes">Draw Times</label>
+                    <input type="Number" id="lDrawTimes" name="lDrawTimes">
+                </div>
+                <div class="form-group">
+                    <label for="lBones">Bones</label>
+                    <input type="number" id="lBones" name="lBones">
+                </div>
+                <div class="form-group">
+                    <label for="lScore">Score</label>
+                    <input type="number" id="lScore" name="lScore">
+                </div>
+                <div class="form-group"> <!--Might have to move this div-->
+                    <label for="fDownLastName">First Down Last Name</label>
+                    <input type="text" id="fDownLastName" name="fDownLastName">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+        <p> Or click <a href="playerCreation/index.php">here</a> to make a new player</p>  
     
-    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
-     <script src='js/index.js'></script>
+        <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
+        <script src='js/index.js'></script>
     </body>
 </html>
