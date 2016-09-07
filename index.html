@@ -57,7 +57,7 @@
                 </div>
                 <div class="form-group col-md-2">
                     <label for="wScore">Score</label>
-                    <input type="number" class="form-control input-sm" id="wScore" name="wScore" value="250">
+                    <input type="number" class="form-control input-sm" id="wScore" name="wScore" value="250" step="5">
                 </div>
                 <br>
                 <br>
@@ -81,7 +81,7 @@
                 </div>
                 <div class="form-group col-md-2">
                     <label for="lScore">Score</label>
-                    <input type="number" class="form-control input-sm" id="lScore" name="lScore">
+                    <input type="number" class="form-control input-sm" id="lScore" name="lScore" value="150" step="5">
                 </div>
                 <br>
                 <br>
