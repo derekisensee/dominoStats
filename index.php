@@ -27,11 +27,11 @@
         <div class="container-fluid">
             <form class=""action="processData.php" method="post">
                 <h2>Date and First Down</h2>
-                <div class="form-group col-xs-2">
+                <div class="form-group col-md-2">
                     <label for="date">Date</label>
                     <input type="text" class="form-control input-sm" name= "date" id="date">
                 </div>
-                <div class="form-group col-xs-2"> <!--Might have to move this div-->
+                <div class="form-group col-md-2"> <!--Might have to move this div-->
                     <label for="fDownLastName">First Down Last Name</label>
                     <input type="text" class="form-control input-sm" id="fDownLastName" name="fDownLastName">
                 </div>
@@ -39,47 +39,47 @@
                 <br>
                 <br>
                 <h2>Winner Stats</h2>
-                <div class="form-group col-xs-2">
+                <div class="form-group col-md-2">
                     <label for="wFirstName">First Name</label>
                     <input type="text" class="form-control input-sm" id="wFirstName" name="wFirst">
                 </div>
-                <div class="form-group col-xs-2">
+                <div class="form-group col-md-2">
                     <label for="wLast">Last Name</label>
                     <input type="text" class="form-control input-sm" id="wLast" name="wLast">
                 </div>
-                <div class="form-group col-xs-2">
+                <div class="form-group col-md-2">
                     <label for="wDrawTimes">Draw Times</label>
                     <input type="Number" class="form-control input-sm" id="wDrawTimes" name="wDrawTimes">
                 </div>
-                <div class="form-group col-xs-2">
+                <div class="form-group col-md-2">
                     <label for="wBones">Bones</label>
                     <input type="number" class="form-control input-sm" id="wBones" name="wBones">
                 </div>
-                <div class="form-group col-xs-2">
+                <div class="form-group col-md-2">
                     <label for="wScore">Score</label>
-                    <input type="number" class="form-control input-sm" id="wScore" name="wScore">
+                    <input type="number" class="form-control input-sm" id="wScore" name="wScore" value="250">
                 </div>
                 <br>
                 <br>
                 <br>
                 <h2>Loser Stats</h2>
-                <div class="form-group col-xs-2">
+                <div class="form-group col-md-2">
                     <label for="lFirstName">First Name</label>
                     <input type="text" class="form-control input-sm" id="lFirstName" name="lFirst">
                 </div>
-                <div class="form-group col-xs-2">
+                <div class="form-group col-md-2">
                     <label for="lLastName">Last Name</label>
                     <input type="text" class="form-control input-sm" id="lLastName" name="lLast">
                 </div>
-                <div class="form-group col-xs-2">
+                <div class="form-group col-md-2">
                     <label for="lDrawTimes">Draw Times</label>
                     <input type="Number" class="form-control input-sm" id="lDrawTimes" name="lDrawTimes">
                 </div>
-                <div class="form-group col-xs-2">
+                <div class="form-group col-md-2">
                     <label for="lBones">Bones</label>
                     <input type="number" class="form-control input-sm"id="lBones" name="lBones">
                 </div>
-                <div class="form-group col-xs-2">
+                <div class="form-group col-md-2">
                     <label for="lScore">Score</label>
                     <input type="number" class="form-control input-sm" id="lScore" name="lScore">
                 </div>
