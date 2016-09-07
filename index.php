@@ -5,9 +5,17 @@
         <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
         <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
         <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css'>
+        <link rel='stylesheet prefetch' href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.0/themes/base/jquery-ui.css">
         <link rel="stylesheet" href="css/index.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <!--^This makes the page mobile friendly. DIsables zooming with user-scalable=no-->
+        <!--Datepicker stuff-->
+        <link rel="stylesheet" type="text/css" href="css/jquery.datepick.css"> 
+        <script type="text/javascript" src="js/jquery.plugin.js"></script> 
+        <script type="text/javascript" src="js/jquery.datepick.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+        <!--Datepicker stuff done-->
         
         <meta charset="utf-8">
         <div id="dominoStatsHead" class="container">
@@ -17,11 +25,11 @@
     
     <body>
         <div class="container-fluid">
-            <h2>Date and First Down</h2>
             <form class=""action="processData.php" method="post">
+                <h2>Date and First Down</h2>
                 <div class="form-group col-xs-2">
                     <label for="date">Date</label>
-                    <input type="text" class="form-control input-sm" name= "date" id="date" placeholder="yyyy-mm-dd">
+                    <input type="text" class="form-control input-sm" name= "date" id="date">
                 </div>
                 <div class="form-group col-xs-2"> <!--Might have to move this div-->
                     <label for="fDownLastName">First Down Last Name</label>
