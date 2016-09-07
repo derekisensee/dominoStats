@@ -4,5 +4,5 @@ $(document).ready(function() {
         $("#date").attr("type", "date")
     }
     else
-        $("#date").datepicker();
+        $("#date").datepicker().datepicker("setDate", new Date());
 });
