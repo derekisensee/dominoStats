@@ -3,6 +3,7 @@
     $username = "root";
     $password = "";
     $dbname = "domino";
+
 	$id = Rand(0, 30);
 	$wFirst = $_POST['wFirst'];
 	$wLast = $_POST['wLast'];

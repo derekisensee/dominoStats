@@ -40,12 +40,24 @@
                 <br>
                 <h2>Winner Stats</h2>
                 <div class="form-group col-md-2">
-                    <label for="wFirstName">First Name</label>
-                    <input type="text" class="form-control input-sm" id="wFirstName" name="wFirst">
-                </div>
-                <div class="form-group col-md-2">
-                    <label for="wLast">Last Name</label>
-                    <input type="text" class="form-control input-sm" id="wLast" name="wLast">
+                    <!--<label for="wFirstName">First Name</label>
+                    <!--<input type="text" class="form-control input-sm" id="wFirstName" name="wFirst">-->
+                    <label for="wLast">Name</label>
+                    <!--<input type="select" class="form-control input-sm" id="wLast" name="wLast">-->
+                    <select name="wLast" class="form-control input-sm">
+                        <?php
+                        $servername = "localhost";
+                        $username = "root";
+                        $password = "";
+                        $dbname = "domino";
+                        $con = mysqli_connect($servername, $username, $password, $dbname);
+                        
+                        $players = mysqli_query($con, "SELECT lastName FROM player");
+                        while ($row = $players->fetch_assoc()){
+                            echo '<option value="' . $row['lastName'] . '">'.$row['lastName'].'</option>';
+                        }
+                        ?>
+                    </select>
                 </div>
                 <div class="form-group col-md-2">
                     <label for="wDrawTimes">Draw Times</label>
@@ -63,13 +75,27 @@
                 <br>
                 <br>
                 <h2>Loser Stats</h2>
-                <div class="form-group col-md-2">
+                <!--<div class="form-group col-md-2">
                     <label for="lFirstName">First Name</label>
                     <input type="text" class="form-control input-sm" id="lFirstName" name="lFirst">
-                </div>
+                </div>-->
                 <div class="form-group col-md-2">
-                    <label for="lLastName">Last Name</label>
-                    <input type="text" class="form-control input-sm" id="lLastName" name="lLast">
+                    <label for="lLastName">Name</label>
+                    <!--<input type="text" class="form-control input-sm" id="lLastName" name="lLast">-->
+                    <select name="lLast" class="form-control input-sm">
+                        <?php
+                        $servername = "localhost";
+                        $username = "root";
+                        $password = "";
+                        $dbname = "domino";
+                        $con = mysqli_connect($servername, $username, $password, $dbname);
+                        
+                        $players = mysqli_query($con, "SELECT lastName FROM player");
+                        while ($row = $players->fetch_assoc()){
+                            echo '<option value="' . $row['lastName'] . '">'.$row['lastName'].'</option>';
+                        }
+                        ?>
+                    </select>
                 </div>
                 <div class="form-group col-md-2">
                     <label for="lDrawTimes">Draw Times</label>

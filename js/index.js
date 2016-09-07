@@ -4,5 +4,5 @@ $(document).ready(function() {
         $("#date").attr("type", "date")
     }
     else
-        $("#date").datepicker().datepicker("setDate", new Date());
+        $("#date").datepicker({dateFormat: "yy-mm-dd"}).datepicker("setDate", new Date());
 });
