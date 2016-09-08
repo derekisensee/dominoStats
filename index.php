@@ -5,73 +5,123 @@
         <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
         <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
         <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css'>
+        <link rel='stylesheet prefetch' href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.0/themes/base/jquery-ui.css">
         <link rel="stylesheet" href="css/index.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <!--^This makes the page mobile friendly. DIsables zooming with user-scalable=no-->
+        <!--Datepicker stuff-->
+        <link rel="stylesheet" type="text/css" href="css/jquery.datepick.css"> 
+        <script type="text/javascript" src="js/jquery.plugin.js"></script> 
+        <script type="text/javascript" src="js/jquery.datepick.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+        <!--Datepicker stuff done-->
         
         <meta charset="utf-8">
-    <div id="dominoStatsHead" class="container">
-            <h1>Super Duper Domino Stats</h1>
-</div>
+        <div id="dominoStatsHead" class="container">
+            <h1>Super Duper Domino Stats - Game Entry</h1>
+        </div>
     </head>
     
     <body>
-        <p>Welcome to the place where the best domino players are on display</p>
-        <p>Enter a name to find the player of your interest.</p>
-         <form action="processData.php" method="post">
-            winnerfirstName: <input type="text" name="wFirst">
-            winnerLastName: <input type="text" name="wLast">
-            loserFirstName: <input type="text" name="lFirst">
-            loserLastName: <input type="text" name="lLast">
-            date: <input type="text" name= "date" placeholder="yyyy-mm-dd">
-            firstDownLastName: <input type="text" name="fDownLastName">
-            winnerDrawTimes: <input type="Number" name="wDrawTimes">
-            winnerBones: <input type="number" name="wBones">
-            winnerScore: <input type="number" name="wScore">
-            loserDrawTimes: <input type="Number" name="lDrawTimes">
-            loserBones: <input type="number" name="lBones">
-            loserScore: <input type="number" name="lScore">
-            
-            <input type="submit">
-        </form>
-    <p> Or click here to make a new player</p>
+        <div class="container-fluid">
+            <form class=""action="processData.php" method="post">
+                <h2>Date and First Down</h2>
+                <div class="form-group col-md-2">
+                    <label for="date">Date</label>
+                    <input type="text" class="form-control input-sm" name= "date" id="date">
+                </div>
+                <div class="form-group col-md-2"> <!--Might have to move this div-->
+                    <label for="fDownLastName">First Down Last Name</label>
+                    <input type="text" class="form-control input-sm" id="fDownLastName" name="fDownLastName">
+                </div>
+                <br>
+                <br>
+                <br>
+                <h2>Winner Stats</h2>
+                <div class="form-group col-md-2">
+                    <!--<label for="wFirstName">First Name</label>
+                    <!--<input type="text" class="form-control input-sm" id="wFirstName" name="wFirst">-->
+                    <label for="wLast">Name</label>
+                    <!--<input type="select" class="form-control input-sm" id="wLast" name="wLast">-->
+                    <select name="wLast" class="form-control input-sm">
+                        <?php
+                        $servername = "localhost";
+                        $username = "root";
+                        $password = "";
+                        $dbname = "domino";
+                        $con = mysqli_connect($servername, $username, $password, $dbname);
+                        
+                        $players = mysqli_query($con, "SELECT lastName FROM player");
+                        while ($row = $players->fetch_assoc()){
+                            echo '<option value="' . $row['lastName'] . '">'.$row['lastName'].'</option>';
+                        }
+                        ?>
+                    </select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="wDrawTimes">Draw Times</label>
+                    <input type="Number" class="form-control input-sm" id="wDrawTimes" name="wDrawTimes">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="wBones">Bones</label>
+                    <input type="number" class="form-control input-sm" id="wBones" name="wBones">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="wScore">Score</label>
+                    <input type="number" class="form-control input-sm" id="wScore" name="wScore" value="250" step="5">
+                </div>
+                <br>
+                <br>
+                <br>
+                <h2>Loser Stats</h2>
+                <!--<div class="form-group col-md-2">
+                    <label for="lFirstName">First Name</label>
+                    <input type="text" class="form-control input-sm" id="lFirstName" name="lFirst">
+                </div>-->
+                <div class="form-group col-md-2">
+                    <label for="lLastName">Name</label>
+                    <!--<input type="text" class="form-control input-sm" id="lLastName" name="lLast">-->
+                    <select name="lLast" class="form-control input-sm">
+                        <?php
+                        $servername = "localhost";
+                        $username = "root";
+                        $password = "";
+                        $dbname = "domino";
+                        $con = mysqli_connect($servername, $username, $password, $dbname);
+                        
+                        $players = mysqli_query($con, "SELECT lastName FROM player");
+                        while ($row = $players->fetch_assoc()){
+                            echo '<option value="' . $row['lastName'] . '">'.$row['lastName'].'</option>';
+                        }
+                        ?>
+                    </select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="lDrawTimes">Draw Times</label>
+                    <input type="Number" class="form-control input-sm" id="lDrawTimes" name="lDrawTimes">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="lBones">Bones</label>
+                    <input type="number" class="form-control input-sm"id="lBones" name="lBones">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="lScore">Score</label>
+                    <input type="number" class="form-control input-sm" id="lScore" name="lScore" value="150" step="5">
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+        <div style="text-align:center;">
+            <p> Or click <a href="playerCreation/index.php">here</a> to make a new player</p>  
+        </div>
         
-    <?php
-    /*$servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "domino";
-    $con = mysqli_connect($servername, $username, $password, $dbname);
-    $result = mysqli_query($con, "SELECT * FROM player");
-        
-    while ($row = mysqli_fetch_assoc($result)) 
-    {
-        echo "<strong>firstName: </strong>" . $row['firstName'];
-		echo " <strong>lastName: </strong>" . $row['lastName'];
-        echo " <strong>win: </strong>" . $row['win'];
-        echo " <strong>lost: </strong>" . $row['lost'];
-		
-		echo "<strong>winnerfirstName: </strong>" . $row['wFirst'];
-		echo "<strong>winnerLastName: </strong>" . $row['wLast'];
-		echo "<strong>loserFirstName: </strong>" . $row['lFirst'];
-		echo "<strong>loserLastName: </strong>" . $row['lLast'];
-		echo "<strong>date: </strong>" . $row['date'];
-		echo "<strong>firstDownLastName: </strong>" . $row['fDownLastName'];
-		echo "<strong>winnerDrawTimes: </strong>" . $row['wDrawTimes'];
-		echo "<strong>winnerBones: </strong>" . $row['wBones'];
-		echo "<strong>winnerScore: </strong>" . $row['wScore'];
-		echo "<strong>loserDrawTimes: </strong>" . $row['lDrawTimes'];
-		echo "<strong>loserBones: </strong>" . $row['lBones'];
-		echo "<strong>loserScore: </strong>" . $row['lScore'];
-	
-		echo "<br>";
-    }
-*/
-    
-    ?>
-
-  
-    
-    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
-     <script src='js/index.js'></script>
+        <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
+        <script src='js/index.js'></script>
     </body>
 </html>
