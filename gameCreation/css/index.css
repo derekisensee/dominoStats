@@ -1,0 +1,27 @@
+#ui-datepicker-div {
+    display:none;
+}
+h1{color: gray;}
+a{ color: darkorange;}
+body {
+
+    background-color:  #36454f;
+    color:white;
+    border:5px solid;
+    padding: 25px;
+    -webkit-border-image: url(back.jpg); /* Safari 3.1-5 */
+    -o-border-image: url(back.jpg); /* Opera 11-12.1 */
+    border-image: url(back.jpg);
+    border-image-slice: 15;
+    border-image-width: 5; 
+    border-image-repeat: round;
+    font-size: 24.125px;
+}
+
+.bord {
+    
+}
+
+.btn {
+    margin-bottom: 8px;
+}

@@ -1,0 +1,32 @@
+html{height:100%;}
+h1{color: red;}
+a{ color: darkorange;
+background-color: #36454f;}
+
+body {
+    background-color:  #36454f;
+    color: darkorange;
+   border:5px solid;
+    padding: 20px;
+    -webkit-border-image: url(back.jpg); /* Safari 3.1-5 */
+    -o-border-image: url(back.jpg); /* Opera 11-12.1 */
+    border-image: url(back.jpg);
+    border-image-slice: 15;
+    border-image-width: 5; 
+    border-image-repeat: round;
+    color: white;
+}
+
+.bord {
+    border-style: dashed;
+    border-width: 1px;
+    border-radius: 23px;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-right: 5px;
+    Color: white;
+}
+.button{
+    color: black;
+}

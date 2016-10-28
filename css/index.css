@@ -1,0 +1,20 @@
+#ui-datepicker-div {display:none;}
+ html{height:100%;}
+h1{color:red;}
+a{ color: darkorange;}
+body {
+   border:5px solid;
+    padding: 20px;
+    -webkit-border-image: url(back.jpg); /* Safari 3.1-5 */
+    -o-border-image: url(back.jpg); /* Opera 11-12.1 */
+    border-image: url(back.jpg);
+    border-image-slice: 15;
+    border-image-width: 5; 
+    border-image-repeat: round;
+    background-color:  #36454f;
+   /* border-bottom: 6px dashed green;
+    border-left: 6px dotted green;
+    border-right: 6px dotted green;
+    border-top: 6px dashed green;*/
+        
+}
