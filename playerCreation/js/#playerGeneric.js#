@@ -12,12 +12,13 @@ $(document).ready(function() {
     for(var i = 0; i < numb; i++) {
         $("#compareDiv"+i).hide("slow");
     }
-    var tableInc= parseInt($("#tableInc").val());
-    var buttonInc= parseInt($("#buttonInc").val());
-    for(int i = 0; i <= tableInc; i++) {
-	
+
+    var tables = parseInt($("#buttonInc").val()); //might have to parseInt it: parseInt($("#buttonInc").val();
+    for(var i = 0; i < tables; i++)
+    {
 	$("#showGame"+i).click(function(){
-	    $("#blah"+i).show("slow");
+	    $("#blah"+i
+	     ).show("slow");
 	});
 	$("#hideGame"+i).click(function(){
 	    $("#blah"+i).hide("slow");

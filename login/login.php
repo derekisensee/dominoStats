@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel='stylesheet prefetch' href="/dominoStats/bootstrap-3.3.7-dist/css/bootstrap.css">
-        <link rel="stylesheet prefetch" href="/dominoStats/bootstrap-3.3.7-dist/css/bootstrap-theme.css">
+        <link rel='stylesheet prefetch' href="/bootstrap-3.3.7-dist/css/bootstrap.css">
+        <link rel="stylesheet prefetch" href="/bootstrap-3.3.7-dist/css/bootstrap-theme.css">
         <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css'>
         <link rel='stylesheet prefetch' href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.0/themes/base/jquery-ui.css">
         <link rel='stylesheet' href="css/login.css">
@@ -11,8 +11,8 @@
     <body>
         <?php
         $servername = "localhost";
-        $username = "root";
-        $password = "";
+        $username = "phpmyadmin";
+        $password = "dominoStatsYo";
         $dbname = "domino";
         $con = mysqli_connect($servername, $username, $password, $dbname);
         
@@ -23,7 +23,6 @@
                     <div class="form-group col-md-4">
                         <label for="username">Username</label>
                         <input type="text" class="form-control" name="username" id="username" required>
-                        <input type="submit" value="Submit">
                     </div>
                 </div>
                 <div class="row">

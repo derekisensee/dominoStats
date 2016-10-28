@@ -12,11 +12,13 @@ $(document).ready(function() {
     for(var i = 0; i < numb; i++) {
         $("#compareDiv"+i).hide("slow");
     }
-
-	$("#showGame").click(function(){
-	    $("#blah").show("slow");
+    var tableInc = parseInt($("#tableInc").val());
+    for(int i = 0; i < tableInc; i++) {
+	$("#showGame"+i).click(function(){
+	    $("#blah"+i).show("slow");
 	});
-	$("#hideGame").click(function(){
-	    $("#blah").hide("slow");
+	$("#hideGame"+i).click(function(){
+	    $("#blah"+i).hide("slow");
 	});
+    }
 });

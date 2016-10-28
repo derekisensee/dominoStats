@@ -116,7 +116,6 @@
             
             $players = mysqli_query($con, "SELECT firstName, lastName FROM player");
             $inc = 0;
-            
             while ($row = $players->fetch_assoc()) {
                 if($row['lastName'] !== $lastName) {
                     echo '<option value=' . $inc . '>' .$row['firstName'] . " " . $row['lastName'] . '</option>';
@@ -126,8 +125,9 @@
             ?>
         </select>
         <br>
-        
         <?php
+	$tableInc = 0;
+	$buttonInc = 0;
         $servername = "localhost";
         $username = "phpmyadmin";
         $password = "dominoStatsYo";
@@ -165,15 +165,11 @@
         echo "<strong> Games Lost Vs " . $row['lastName'] . " : </strong>". $gamesLost;
         echo "<strong> First Down Percent: </strong>". round($firstDownPercent) . "%";
         echo "</div>";
-	$tableInc = 0;
-	$hideInc = 0;
-	$showInc = 0;
-        echo "<table id='blah'  class='table'>";
-        echo "<button id='hideGame' class='button'>Hide Games</button>";
-        echo "<button id='showGame' class='button'>Show Games</button>";
+        echo "<table id='blah" . $tableInc . "'  class='table'>";
+        echo "<button id='hideGame" . $buttonInc . "' class='button'>Hide Games</button>";
+        echo "<button id='showGame" . $buttonInc . "' class='button'>Show Games</button>";
+	$buttonInc++;
 	$tableInc++;
-        $hideInc++;
-        $showInc++;
         echo "<tr><th>Winner Name</th><th>Loser Name</th><th>First Down</th><th>Winner Draw Times</th><th>Winner Bones</th><th>Loser Draw Times</th><th>Loser Bones</th><th>Loser Score</th><th>Date</th></tr>";
 		$con = mysqli_connect($servername, $username, $password, $dbname);
         	$playerGames = mysqli_query($con, "CALL PlayerCompare('". $lastName . "', '" . $row['lastName'] . "')");
@@ -206,8 +202,7 @@
         }
            echo "<p id='playerInc' hidden>" . $inc . "</p>";
 	   echo "<p id='tableInc' hidden>" . $inc . "</p>";
-	   echo "<p id='hideInc' hidden>" . $inc . "</p>";
-	   echo "<p id='showInc' hidden>" . $inc . "</p>";
+	   echo "<p id='buttonInc' hidden>" . $inc . "</p>";
         ?>
                 
         <?php
