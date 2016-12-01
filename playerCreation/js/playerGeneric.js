@@ -12,13 +12,20 @@ $(document).ready(function() {
     for(var i = 0; i < numb; i++) {
         $("#compareDiv"+i).hide("slow");
     }
-    var tableInc = parseInt($("#tableInc").val());
-    for(int i = 0; i < tableInc; i++) {
-	$("#showGame"+i).click(function(){
-	    $("#blah"+i).show("slow");
-	});
-	$("#hideGame"+i).click(function(){
-	    $("#blah"+i).hide("slow");
-	});
-    }
+    $("#test"+0).on("click", function() {
+	$("#dataTable"+0).toggle("slow");
+    });	
+    $("#test"+1).on("click", function() {
+	$("#dataTable"+1).toggle("slow");
+    });
+    $("#draw").on("click", function() {
+	$("#win").toggle("slow");
+	$("#lose").toggle("slow");
+	$("h4").toggle();
+    });
+    /*for(var i = 0; i < numb; i++) {
+       	$("#test"+i).on("click", function(){
+		$("#test"+i).toggle("slow");
+    	});
+    }*/ 
 });

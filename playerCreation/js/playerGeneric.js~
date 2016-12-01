@@ -13,7 +13,7 @@ $(document).ready(function() {
         $("#compareDiv"+i).hide("slow");
     }
 
-    var tables = parseInt($("#buttonInc").val()); //might have to parseInt it: parseInt($("#buttonInc").val();
+   /* var tables = parseInt($("#tableInc").val()); //might have to parseInt it: parseInt($("#buttonInc").val();
     for(var i = 0; i < tables; i++)
     {
 	$("#showGame"+i).click(function(){
@@ -22,5 +22,5 @@ $(document).ready(function() {
 	$("#hideGame"+i).click(function(){
 	    $("#blah"+i).hide("slow");
 	});
-    }
+    }*/
 });

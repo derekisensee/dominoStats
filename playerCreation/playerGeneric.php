@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<DOCTYPE
 <html>
     <head>
         <title>Domino Tracker</title>
         <!--Links for font awesome, jquery UI, and bootstrap. also calls the index.css file in the css folder-->
-        <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
+        <!--<link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">-->
         <link rel='stylesheet prefetch' href="/bootstrap-3.3.7-dist/css/bootstrap.css">
         <link rel="stylesheet prefetch" href="/bootstrap-3.3.7-dist/css/bootstrap-theme.css">
         <link rel="stylesheet" href="css/index.css">
@@ -40,7 +40,7 @@
             return $valAvg / $valInc; //!!!returns average here!!!
         }
         
-        $servername = "localhost";
+       
         $username = "phpmyadmin";
         $password = "dominoStatsYo";
         $dbname = "domino";
@@ -105,7 +105,7 @@
         $players = mysqli_query($con, "SELECT * FROM player");
         ?>
         <h3>Stat comparison</h3>
-        <select id="compare" class="form-control">
+        <select id="compare" class="form-control"> 
             <option selected="selected">Click me to choose a player to compare to!</option>
             <?php
             $servername = "localhost";
@@ -116,6 +116,7 @@
             
             $players = mysqli_query($con, "SELECT firstName, lastName FROM player");
             $inc = 0;
+            
             while ($row = $players->fetch_assoc()) {
                 if($row['lastName'] !== $lastName) {
                     echo '<option value=' . $inc . '>' .$row['firstName'] . " " . $row['lastName'] . '</option>';
@@ -125,6 +126,7 @@
             ?>
         </select>
         <br>
+        
         <?php
 	$tableInc = 0;
 	$buttonInc = 0;
@@ -141,11 +143,12 @@
             $playerGames = mysqli_query($con, "CALL PlayerCompare('" . $lastName . "', '" . $row['lastName'] . "')" );
             
             if($row['lastName'] !== $lastName) {
+
                 echo "<div id='compareDiv" . $inc . "'>";
                 echo "<h3>Versus " . $row['lastName'] . "</h3>";
 		$con = mysqli_connect($servername, $username, $password, $dbname);
         	$playerGames = mysqli_query($con, "CALL PlayerCompare('". $lastName . "', '" . $row['lastName'] . "')");
-
+	    
         $gamesWon = 0;
         $gamesLost = 0;
         $totalFirstDowns = 0;
@@ -162,14 +165,15 @@
         $firstDownPercent = ($totalFirstDowns / $firstDownInc) * 100;
         echo "<div class='col-md-4'>";
         echo "<strong> Games Won Vs " . $row['lastName'] . " : </strong>". $gamesWon;
+	echo "<br>";
         echo "<strong> Games Lost Vs " . $row['lastName'] . " : </strong>". $gamesLost;
+	echo "<br>";
         echo "<strong> First Down Percent: </strong>". round($firstDownPercent) . "%";
         echo "</div>";
-        echo "<table id='blah" . $tableInc . "'  class='table'>";
-        echo "<button id='hideGame" . $buttonInc . "' class='button'>Hide Games</button>";
-        echo "<button id='showGame" . $buttonInc . "' class='button'>Show Games</button>";
-	$buttonInc++;
-	$tableInc++;
+	echo "<button id='test".$inc."' class='btn btn-default'>Show/Hide Games</button>";
+	//echo "<button id='hideButton" . $inc . "' class='btn btn-default'>Hide/Show Games</button>";
+        echo "<table id='dataTable".$inc."' class='table' style='display: none;'>";
+	//echo "<button id='hideButton" . $inc . "' class='btn btn-default'>Hide/Show Games</button>";	
         echo "<tr><th>Winner Name</th><th>Loser Name</th><th>First Down</th><th>Winner Draw Times</th><th>Winner Bones</th><th>Loser Draw Times</th><th>Loser Bones</th><th>Loser Score</th><th>Date</th></tr>";
 		$con = mysqli_connect($servername, $username, $password, $dbname);
         	$playerGames = mysqli_query($con, "CALL PlayerCompare('". $lastName . "', '" . $row['lastName'] . "')");
@@ -199,17 +203,17 @@
                 echo "</div>";
                 $inc++;
             }
+	
         }
-           echo "<p id='playerInc' hidden>" . $inc . "</p>";
-	   echo "<p id='tableInc' hidden>" . $inc . "</p>";
-	   echo "<p id='buttonInc' hidden>" . $inc . "</p>";
+        echo "<p id='playerInc' hidden>" . $inc . "</p>";
         ?>
                 
         <?php
+	echo "<br>";
         echo "<h3>Draw Breakdown</h3>";
-        
+	echo "<button id='draw' class='btn btn-default'>Show/Hide Draw Breakdown</button>";
         echo "<h4>Win Draws</h4>";
-        echo "<table class='table'>";
+        echo "<table id='win' class='table'>";
         echo "<tr><th>Draw Times</th><th>Bones</th></tr>";
         $con = mysqli_connect($servername, $username, $password, $dbname);
         $playerWinDraws = mysqli_query($con, "CALL PlayerWinDraws('" . $lastName . "')");
@@ -222,7 +226,7 @@
         echo "</table>";
         
         echo "<h4>Lose Draws</h4>";
-        echo "<table class='table'>";
+        echo "<table id='lose' class='table'>";
         echo "<tr><th>Draw Times</th><th>Bones</th></tr>";
         $con = mysqli_connect($servername, $username, $password, $dbname);
         $playerWinDraws = mysqli_query($con, "CALL PlayerLoseDraws('" . $lastName . "')");
@@ -234,8 +238,8 @@
         }
         echo "</table>";
         ?>        
-        <script src="/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
         <script src="/bootstrap-3.3.7-dist/jquery-3.1.1.js"></script>
+	<script src="/jquery-ui-1.12.1.custom/jquery-ui.js"></script> 
         <script src="js/playerGeneric.js"></script>
     </body>
 </html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<DOCTYPE html>
 <html>
     <head>
         <link rel='stylesheet prefetch' href="/bootstrap-3.3.7-dist/css/bootstrap.css">
@@ -28,7 +28,7 @@
                 <div class="row">
                     <div class="form-group col-md-4">
                         <label for="password">Password</label>
-                        <input type="password" class="form-control" name="password" id="password">
+                        <input type="password" class="form-control" name="password" id="password" required>
                     </div>
                 </div>
                 <button type="submit" class="btn btn-default">Submit</button>

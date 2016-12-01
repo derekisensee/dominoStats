@@ -123,10 +123,10 @@
         
         $inc = 0;
         foreach($drawTimesAvg as $avg) {
-            echo "<p id=avg" . $inc . ">" . $avg . "</p>";
+            //echo "<p id=avg" . $inc . ">" . $avg . "</p>";
             $inc += 1;
         }
-        echo "<p id='totAvg'>" . $inc . "</p>";
+        //echo "<p id='totAvg'>" . $inc . "</p>";
         ?>
         
         <div id="procedureDiv">

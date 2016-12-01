@@ -10,8 +10,23 @@ $pass = $_POST["password"];
 
 $hashed = hash('sha512', $pass);
 
-echo $hashed;
-
-$check = mysqli_query($con, "SELECT username, password FROM player WHERE username = '$user' AND password = '$hashed'");
-if($check)
+$player = mysqli_query($con, "SELECT * FROM player");
+$val = -1;
+while($row = mysqli_fetch_assoc($player)){
+	if($row['username'] == $user && $row['hash'] == $hashed){
+		$val = 1;
+		break;
+	}
+	else{
+		$val = 0;
+	}
+}
+if($val==1){
+	echo "Hello!";
+	$login = true;
+}
+else{
+	echo "Bye!";
+	$login = false;
+}
 ?>
