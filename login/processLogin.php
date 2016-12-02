@@ -22,11 +22,11 @@ while($row = mysqli_fetch_assoc($player)){
 	}
 }
 if($val==1){
-	echo "Hello!";
-	$login = true;
+	echo "Welcome back, redirecting in 3 seconds.";
+	header('Refresh: 3; url=10.55.246.13/index.php');
 }
 else{
-	echo "Bye!";
-	$login = false;
+	echo "Sorry, please try again, redirecting in 3 seconds.";
+	header('Refresh: 3; url= login.php');
 }
 ?>

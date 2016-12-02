@@ -25,6 +25,6 @@ if($val==1){
 	mysqli_query($con, "INSERT INTO player (id, firstName, lastName, win, lost, username, hash) VALUES ($id, '$first', '$last', 0, 0, '$user', '$hashed')");
 }
 else{
-	echo "Sorry, this username has been used";
+	echo "Sorry, this username has been used, please go back and choose a different username.";
 }
 ?>

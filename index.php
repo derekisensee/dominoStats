@@ -1,3 +1,11 @@
+<?php
+	setcookie("user","phpCookie",time()+3600*50*24*7);
+	if(isset($_COOKIE['user'])){
+		echo "Hello" . $_COOKIE['user'];
+	}
+	else{
+		<
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,7 +18,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <div class="container-fluid">
             <div class="row">
-                <div class="pull-right"><a href="login/login.php">Login</a></div>
+                <?php if(isset($_SESSION['firstName'])): ?>
+			Hello, <? $_SESSION['firstName'] ?>!
+			<a href="logout.php">Log out</a>
+		<?php else: ?>
+			<a href="login/login.php">Log in</a>
+		<?php endif;?>
                 <h1 class="col-md-8 col-md-offset-2">Super Duper Domino Stats <small>Home</small></h1>
             </div>
         </div>
