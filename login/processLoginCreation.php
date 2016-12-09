@@ -21,8 +21,9 @@ while($row = mysqli_fetch_assoc($player)){
 		$val = 1;
 	}
 }
-if($val==1){
+if($val==0){
 	mysqli_query($con, "INSERT INTO player (id, firstName, lastName, win, lost, username, hash) VALUES ($id, '$first', '$last', 0, 0, '$user', '$hashed')");
+	header('Location: /index.php');
 }
 else{
 	echo "Sorry, this username has been used, please go back and choose a different username.";
