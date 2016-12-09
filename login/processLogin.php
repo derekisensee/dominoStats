@@ -4,17 +4,16 @@ $username = "phpmyadmin";
 $password = "dominoStatsYo";
 $database = "domino";
 $con = mysqli_connect($servername, $username, $password, $database);
-
 $user = $_POST["username"];
 $pass = $_POST["password"];
-
 $hashed = hash('sha512', $pass);
-
 $player = mysqli_query($con, "SELECT * FROM player");
 $val = -1;
 while($row = mysqli_fetch_assoc($player)){
 	if($row['username'] == $user && $row['hash'] == $hashed){
 		$val = 1;
+		session_start();
+		$_SESSION['user'] = $user;
 		break;
 	}
 	else{
