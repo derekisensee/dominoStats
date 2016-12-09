@@ -23,25 +23,25 @@
                 <div class="row">
                     <div class="form-group col-md-4">
                         <label for="uname">Username</label>
-                        <input type="text" class="form-control" name="uname" id="uname" required>
+                        <input type="text" class="form-control" name="uname" id="uname">
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-md-4">
                         <label for="password">Password</label>
-                        <input type="password" class="form-control" name="password" id="password" required>
+                        <input type="password" class="form-control" name="password" id="password">
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-md-4">
                         <label for="firstName">First Name</label>
-                        <input type="text" class="form-control" name="firstName" id="firstName" required>
+                        <input type="text" class="form-control" name="firstName" id="firstName">
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-md-4">
                         <label for="lastName">Last Name</label>
-                        <input type="text" class="form-control" name="lastName" id="lastName" required>
+                        <input type="text" class="form-control" name="lastName" id="lastName">
                     </div>
                 </div>
                 <button type="submit" class="btn btn-default">Submit</button>

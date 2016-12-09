@@ -1,12 +1,10 @@
 <?php
-	session_start();
-	if(isset($_SESSION['user'])){
-		echo "Welcome, " . $_SESSION['user'];
-		echo "<a href='login/logout.php'> logout?</a>";
+	setcookie("user","phpCookie",time()+3600*50*24*7);
+	if(isset($_COOKIE['user'])){
+		echo "Hello" . $_COOKIE['user'];
 	}
 	else{
-		echo "<a href='login/login.php'>Login</a>";
-	}
+		<
 ?>
 <!DOCTYPE html>
 <html>
@@ -20,6 +18,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <div class="container-fluid">
             <div class="row">
+                <?php if(isset($_SESSION['firstName'])): ?>
+			Hello, <? $_SESSION['firstName'] ?>!
+			<a href="logout.php">Log out</a>
+		<?php else: ?>
+			<a href="login/login.php">Log in</a>
+		<?php endif;?>
                 <h1 class="col-md-8 col-md-offset-2">Super Duper Domino Stats <small>Home</small></h1>
             </div>
         </div>

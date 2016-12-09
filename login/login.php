@@ -1,4 +1,11 @@
-
+<?php
+	session_start();
+	if(isset($_POST['firstName']))
+	{
+		$_SESSION['firstName'] = $_POST['firstName'];
+		header("Location: index.php");
+	}
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -32,7 +39,7 @@
                         <input type="password" class="form-control" name="password" id="password" required>
                     </div>
                 </div>
-                <input type="submit" class="btn btn-default" value="submit" name="submit">
+                <input type="submit" class="btn btn-default" value="Submit">
             </form>
         </div>
         <h4><a href="createLogin.php">Create Account</a></h4>
