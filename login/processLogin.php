@@ -23,7 +23,7 @@ while($row = mysqli_fetch_assoc($player)){
 }
 if($val==1){
 	echo "Welcome back, redirecting in 3 seconds.";
-	header('Refresh: 3; url=10.55.246.13/index.php');
+	header('Refresh: 3; url=/index.php');
 }
 else{
 	echo "Sorry, please try again, redirecting in 3 seconds.";

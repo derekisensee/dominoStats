@@ -23,7 +23,8 @@ while($row = mysqli_fetch_assoc($player)){
 }
 if($val==1){
 	mysqli_query($con, "INSERT INTO player (id, firstName, lastName, win, lost, username, hash) VALUES ($id, '$first', '$last', 0, 0, '$user', '$hashed')");
-	header('Location: /index.php');
+	echo "Great, will refresh for you";
+	header('Refresh: 3; url =  /index.php');
 }
 else{
 	echo "Sorry, this username has been used, try again.";

@@ -1,3 +1,10 @@
+<?php
+	session_start();
+	if(!isset($_SESSION['user'])){
+		echo "Please login";
+		header('Location: userLogin.php');
+	}
+?>
 <!DOCTYPE html>
 <html>
     
