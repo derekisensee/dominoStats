@@ -26,7 +26,7 @@
         
         ?>
         <div class="container loginDiv">
-            <form action="processLogin.php" method="post">
+            <form action="processLogin.php" method="post" enctype="multipart/form-data">
                 <div class="row">
                     <div class="form-group col-md-4">
                         <label for="username">Username</label>

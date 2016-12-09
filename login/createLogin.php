@@ -44,6 +44,11 @@
                         <input type="text" class="form-control" name="lastName" id="lastName">
                     </div>
                 </div>
+		<div class="row">
+                    <div class="form-group col-md-4">
+                        <input type="file" name="fileToUpload" id="fileToUpload">
+                    </div>
+                </div>
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
         </div>
