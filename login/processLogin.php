@@ -4,29 +4,25 @@ $username = "phpmyadmin";
 $password = "dominoStatsYo";
 $database = "domino";
 $con = mysqli_connect($servername, $username, $password, $database);
-
-$user = $_POST["username"];
-$pass = $_POST["password"];
-
+$pass = $_POST['password'];
+$user = $_POST['username'];
 $hashed = hash('sha512', $pass);
-
 $player = mysqli_query($con, "SELECT * FROM player");
-$val = -1;
 while($row = mysqli_fetch_assoc($player)){
-	if($row['username'] == $user && $row['hash'] == $hashed){
-		$val = 1;
-		break;
-	}
-	else{
-		$val = 0;
-	}
+	$pass = $_POST['password'];
+	$user = $_POST['username'];
+	$hash = hash('sha512', $pass);
+	if($row['username'] == $user && $row['hash'] == $hash){
+		session_start();
+		echo $row['username'];
+		echo $row['hash'];
+		$_SESSION['user'] = $user;
+		header("location: /index.php");
+	} 
 }
-if($val==1){
-	echo "Welcome back, redirecting in 3 seconds.";
-	header('Refresh: 3; url=10.55.246.13/index.php');
-}
-else{
-	echo "Sorry, please try again, redirecting in 3 seconds.";
-	header('Refresh: 3; url= login.php');
-}
+echo "Sorry try again";
+header('Refresh: 3; url = login.php');
+//else{	
+//	header('location: login.php');
+//}
 ?>
