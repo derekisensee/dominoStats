@@ -87,8 +87,13 @@
             echo "<br>";
             echo "<strong>Total Games: </strong>" . $totalGames . "</p>";
             echo "</div>";
-            echo "<img class='col-md-4 img-responsive img-circle' width='200' height='200' src='profile" . $pictureInc . ".jpg'>";
-            echo "</div>";
+	    if($playerInc < 3){ 
+            	echo "<img class='col-md-4 img-responsive img-circle' width='200' height='200' src='profile" . $pictureInc . ".jpg'>";
+            }
+            else{
+	    	echo "<img class='col-md-4 img-responsive img-circle' width='200' height='200' src=images/".$row['name'].">";
+	    }
+	    echo "</div>";
             
             $playerInc += 1;
         }

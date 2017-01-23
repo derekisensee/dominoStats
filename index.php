@@ -21,6 +21,7 @@
         <div class="container-fluid">
             <div class="row">
                 <h1 class="col-md-8 col-md-offset-2">Super Duper Domino Stats <small>Home</small></h1>
+		<h2 class="col-md-8 col-md-offset-2"><small>Created By: Zachery Sisemore & Derek Isensee</small>
             </div>
         </div>
     </head>
