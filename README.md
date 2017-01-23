@@ -1,2 +1,2 @@
 # dominoStats
-this is a project for making domino stats and keeping kids cool
+This project takes games of Dominos, puts them into a MySQL database, and displays back this data (and a few statistics, along with comparisons with other players).
